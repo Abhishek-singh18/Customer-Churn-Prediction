@@ -14,7 +14,8 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 50)
 
 
-df = pd.read_csv(r'C:\Users\abhis\OneDrive\Desktop\Customer prediciton churn\WA_Fn-UseC_-Telco-Customer-Churn.csv')
+
+df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 
 df = df.drop('customerID', axis=1)
@@ -71,7 +72,7 @@ print('\nModel evaluation')
 
 accuracy = accuracy_score(y_test, y_pred)
 print(f'overall Accuracy: {accuracy * 100:.2f}%\n')
-print('Classification reprot')
+print('Classification report')
 print(classification_report(y_test, y_pred))
 print('Confusion Matrix')
 print(confusion_matrix(y_test, y_pred))
